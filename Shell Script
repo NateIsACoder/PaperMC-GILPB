@@ -5,7 +5,7 @@
 # PMCAUS is licensed under the Apache License 2.0
 
 # Configuration
-MINECRAFT_VERSION="1.21.1"  # Change to your Minecraft version
+MINECRAFT_VERSION="1.21"  # Change to your Minecraft version
 SERVER_DIR="/home/minecraft"  # Change to your server directory
 BACKUP_DIR="/home/minecraft/backups"  # Where to store backups
 JAR_NAME="paper.jar"  # Name of your server jar file
@@ -82,21 +82,18 @@ else
     exit 1
 fi
 
-# Clean old backups (keep last 5)
-echo "Cleaning old backups..."
+# Clean old backups 
+echo "Cleaning old backups (keeping last 5)"
 cd "$BACKUP_DIR"
 ls -t paper-backup-*.jar | tail -n +6 | xargs -r rm
 
 # Restart server if it was running
 if [ "$SERVER_WAS_RUNNING" = true ]; then
     echo -e "${YELLOW}Starting server...${NC}"
-    
-    
+        
     sudo systemctl start minecraft
-
-    
+ 
     cd "$SERVER_DIR"
-
     
     echo -e "${YELLOW}Note: Server start command is commented out. Uncomment and adjust for your setup.${NC}"
 fi
