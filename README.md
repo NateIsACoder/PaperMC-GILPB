@@ -1,4 +1,11 @@
-# PaperMC-Auto-Update-Script
+# PaperMC-Auto-Update-Script (AKA PMCAUS)
+  _____  __  __  _____         _    _  _____ 
+ |  __ \|  \/  |/ ____|   /\  | |  | |/ ____|
+ | |__) | \  / | |       /  \ | |  | | (___  
+ |  ___/| |\/| | |      / /\ \| |  | |\___ \ 
+ | |    | |  | | |____ / ____ \ |__| |____) |
+ |_|    |_|  |_|\_____/_/    \_\____/|_____/ 
+                                             
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Nategarstka/PaperMC-Auto-Update-Script)
 Check the wiki for more details and guides.
 ## Description:
