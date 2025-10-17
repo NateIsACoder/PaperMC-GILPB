@@ -1,8 +1,8 @@
 !/bin/bash
 
-# Nate G's PaperMC Auto-Update Script
-# This script downloads the latest PaperMC build and updates your Paper MC server
-# Licensed under the Apache License 2.0
+# Nate G's PaperMC Auto-Update Script or PMCAUS for short
+# PMCAUS downloads the latest PaperMC build and updates your Paper MC server
+# PMCAUS is licensed under the Apache License 2.0
 
 # Configuration
 MINECRAFT_VERSION="1.21.1"  # Change to your Minecraft version
@@ -16,7 +16,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-echo -e "${GREEN}=== Nate G's PaperMC Update Script ===${NC}"
+echo -e "${GREEN}=== PMCAUS ===${NC}"
 
 # Check if server directory exists
 if [ ! -d "$SERVER_DIR" ]; then
@@ -25,7 +25,7 @@ if [ ! -d "$SERVER_DIR" ]; then
 fi
 
 # Create backup directory if it doesn't exist
-mkdir -p "$backup_File_directory"
+mkdir -p "$PMCAUS_backups"
 
 # Get latest build number
 echo "Seaching for PaperMC Build Info"
@@ -47,7 +47,7 @@ if pgrep -f "$JAR_NAME" > /dev/null; then
     
     pkill -f "$JAR_NAME"
     
-    # Wait for server to stop
+    # Wait for server to stop to execute code
     echo "Waiting for server to stop..."
     sleep 10
     SERVER_WAS_RUNNING=true
@@ -64,7 +64,7 @@ if [ -f "$SERVER_DIR/$JAR_NAME" ]; then
 fi
 
 # Download new version
-echo "Downloading Paper build ${LATEST_BUILD}..."
+echo "Downloading latest paper build: ${LATEST_BUILD}..."
 DOWNLOAD_URL="https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}/builds/${LATEST_BUILD}/downloads/paper-${MINECRAFT_VERSION}-${LATEST_BUILD}.jar"
 
 curl -o "$SERVER_DIR/$JAR_NAME" "$DOWNLOAD_URL"
