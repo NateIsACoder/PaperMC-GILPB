@@ -1,5 +1,5 @@
 # PaperMC-Auto-Update-Script
-![Commits](https://img.shields.io/github/commit-activity/m/torvalds/linux)
+![Commits](https://img.shields.io/(https://github.com/Nategarstka/PaperMC-Auto-Update-Script))
 ## Description:
 This is a script for the Linux Terminal that will fetch the latest version of Paper MC for you Minecraft version and will auto install that build, and will backup the version you were just using into the directory ```backup_File_dirctory``` inside of a folder of your chosing via the config section of the program. 
 
