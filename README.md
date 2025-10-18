@@ -3,14 +3,14 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Nategarstka/PaperMC-Auto-Update-Script)
 ![GitHub contributors](https://img.shields.io/github/contributors/Nategarstka/PaperMC-Auto-Update-Script)
 
-<br> Check the wiki for more details and guides. Some acronymms included in this README: PMCAUS = PaperMC Auto Update Script || SHS = SHell Script || CLI = Command Line Interface
+<br> Check the wiki for more details and guides. Some acronymms I use are listed below for clarity:<br> PMCAUS = PaperMC Auto Update Script || SHS = SHell Script || CLI = Command Line Interface || SSH = Secure SHell
 ## Description:
 This is a SHS for the Linux Terminal that will fetch the latest version of Paper MC for your Minecraft version, will automaticlly install that build, and will backup the version you were just using into the directory ```backup_File_dirctory``` inside of your Minecraft Paper server's folder, in case you run into issues and need to rollback to an earlier build.
 
 ## How to Install: (From the CLI)
 If you are going to install PMCAUS to a remote machine via SSH, then SSH into your desired server and follow the directions below.
 
-WIP >>>> Run ```wget https://github.com/Nategarstka/PaperMC-Auto-Update-Script``` to download the SHS. <<<<<
+In the terminal, get into your Paper server's main directory, which has files like ```ops.JSON``` and ```server.properties``` The command should look something like this: ```cd /path/to/mc/server``` Run ```wget (https://raw.githubusercontent.com/Nategarstka/PaperMC-Auto-Update-Script/refs/heads/main/ShellScript)``` to download the SHS. 
 
 
 After you have done this, ```nano``` into the file, scroll to the top and you should see ```CONFIG```. Edit this as nessacary. There is a page in the wiki dedicated to walking the user through this. At this point you should be ready to run PMCAUS, so type ```chmod +x ~/update-papermc.sh``` to make the file executable and ```sudo ./update-papermc.sh``` to run it.
