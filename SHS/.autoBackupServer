@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Nate G's ABS script. (Auto Backup Server)
+# This program creates a backup of your current speciifed files inside of your main server directory.
+# Licensed under the Apache License 2.0
+
+SERVER_DIR="/home/minecraft" # Change this to the path to your server's main directory
+BACKUP_DIR="/home/minecraft/backup_File_directory" # Change this to the path of your server, but leave the last path alone
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Check if server backup directory exists
+cd "$SERVER_DIR"
+if [ ! -d backup_File_directory ]; then
+    echo -e "${RED}Error: Backup server directory does not exist! Creating backup_File_directory!${NC}"
+    exit 1
+fi
+# Create backup directory for the server if none is found
+mkdir -p backup_File_directory
+

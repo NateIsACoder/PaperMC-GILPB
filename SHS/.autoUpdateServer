@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Nate G's PaperMC Auto-Update Script
-# This script downloads the latest PaperMC build and updates your Paper MC server
+# Nate G's AUS script. (Auto Update Server)
+# This script downloads the latest PaperMC build and updates your Paper MC server. It will stop your server, but will not start it up again.
 # Licensed under the Apache License 2.0
 
 # CONFIG
@@ -12,15 +12,6 @@ JAR_NAME="paper.jar"  # Name of your server jar file (you can leave this alone)
 SCREEN_NAME="minecraft"  # Name of your screen session
 JAVA_MEMORY_MAX="4G"  # Maximum RAM allocation (adjust as needed)
 JAVA_MEMORY_MIN="2G"  # Minimum RAM allocation (adjust as needed)
-
-# Check if server backup directory exists
-cd "$SERVER_DIR"
-if [ ! -d backup_File_directory ]; then
-    echo -e "${RED}Error: Backup server directory does not exist! Creating backup_File_directory! (Error code 1)${NC}"
-    exit 1
-fi
-# Create backup directory for the server if none is found
-mkdir -p backup_File_directory
 
 # Colors for output
 RED='\033[0;31m'
