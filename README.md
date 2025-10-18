@@ -2,8 +2,6 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Nategarstka/PaperMC-Auto-Update-Script)
 ![GitHub contributors](https://img.shields.io/github/contributors/Nategarstka/PaperMC-Auto-Update-Script)
 <br> GLPB and AUS are short for Get Latest Paper Build and Auto Update Server. These are 2 diffrent scripts designed to help keep your Minecraft Paper server updated. 
-
-<br> Check the wiki for more details and guides on these projects. 
 ### <br> Some acronymms I use are in this repo listed below for clarity:
 GLPB == Get Latest Paper Build || AUS = Auto Update Server || SHS = SHell Script(s) || CLI = Command Line Interface || SSH = Secure SHell
 
