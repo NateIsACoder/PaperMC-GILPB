@@ -16,10 +16,10 @@ JAVA_MEMORY_MIN="2G"  # Minimum RAM allocation (adjust as needed)
 # Check if server backup directory exists
 cd "$SERVER_DIR"
 if [ ! -d backup_File_directory ]; then
-    echo -e "${RED}Error: Backup server directory does not exist! (Error code 1)${NC}"
+    echo -e "${RED}Error: Backup server directory does not exist! Creating backup_File_directory! (Error code 1)${NC}"
     exit 1
 fi
-# Create backup directory for the server
+# Create backup directory for the server if none is found
 mkdir -p backup_File_directory
 
 # Colors for output
@@ -60,12 +60,12 @@ fi
 # Backup current jar
 if [ -f "$SERVER_DIR/$JAR_NAME" ]; then
     BACKUP_NAME="paper-backup-$(date +%Y%m%d-%H%M%S).jar"
-    echo "Backing up current jar to $BACKUP_DIR/$BACKUP_NAME"
+    echo "Backing up current jar to "$BACKUP_DIR/$BACKUP_NAME"
     cp "$SERVER_DIR/$JAR_NAME" "$BACKUP_DIR/$BACKUP_NAME"
 fi
 
 # Download new version
-echo "Downloading Paper build ${LATEST_BUILD}"
+echo "${GREEN}Downloading latest Paper build for your version: ${LATEST_BUILD}${NC}"
 DOWNLOAD_URL="https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}/builds/${LATEST_BUILD}/downloads/paper-${MINECRAFT_VERSION}-${LATEST_BUILD}.jar"
 
 curl -o "$SERVER_DIR/$JAR_NAME" "$DOWNLOAD_URL"
@@ -96,5 +96,5 @@ if [ "$SERVER_WAS_RUNNING" = true ]; then
     echo -e "${GREEN}Server started in screen session '${SCREEN_NAME}'${NC}"
 fi
 
-echo -e "${GREEN}=== Update Complete! Star the github if you enjoyed using this program. ===${NC}"
-echo "Updated to Paper build ${LATEST_BUILD}. Enjoy using PaperMC!"
+echo -e "${GREEN}=== Update Complete! Star the github if you enjoyed using this program! ===${NC}"
+echo "Updated to Paper build ${LATEST_BUILD}. Check out my plugin as well! Linked on my Github page."
