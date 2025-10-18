@@ -7,9 +7,7 @@
 # CONFIG
 MINECRAFT_VERSION="1.21.10"  # Change to your Minecraft version
 SERVER_DIR="/home/minecraft"  # Change to your server directory
-BACKUP_DIR="/home/minecraft/backup_File_directory"  # Where the program stores backups (leave this alone)
 JAR_NAME="paper.jar"  # Name of your server jar file (you can leave this alone)
-SCREEN_NAME="minecraft"  # Name of your screen session
 
 # Colors for output
 RED='\033[0;31m'
@@ -32,16 +30,13 @@ fi
 echo -e "Latest build: ${GREEN}${LATEST_BUILD}${NC}"
 
 # Download new version
-echo "${GREEN}Downloading latest Paper build for your version: ${LATEST_BUILD}${NC}"
+echo "${GREEN} Downloading latest Paper build for your version: ${LATEST_BUILD}${NC}"
 DOWNLOAD_URL="https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}/builds/${LATEST_BUILD}/downloads/paper-${MINECRAFT_VERSION}-${LATEST_BUILD}.jar"
 
 curl -o "$SERVER_DIR/$JAR_NAME" "$DOWNLOAD_URL"
 
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}Download successful!${NC}"
+    echo -e "${GREEN}Update Complete! Updated to Paper build ${LATEST_BUILD}. Star the github repo if you enjoyed using this program!${NC}"
 else
     echo -e "${RED}Error! Download failed!${NC}"
-
-# Program results   
-echo -e "${GREEN}=== Update Complete! Star the github if you enjoyed using this program! ===${NC}"
-echo -e "Updated to Paper build ${LATEST_BUILD}. Check out my plugin as well! Linked on my Github page.
+fi
