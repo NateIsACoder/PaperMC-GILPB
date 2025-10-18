@@ -1,5 +1,4 @@
-# PaperMC-Auto-Update-Script 
-### (AKA PMCAUS) <br>
+# PaperMC-Auto-Update-Script (AKA PMCAUS) 
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Nategarstka/PaperMC-Auto-Update-Script)
 <br> Check the wiki for more details and guides.
