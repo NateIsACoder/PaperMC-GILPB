@@ -1,9 +1,8 @@
-# PaperMC-Automatic-Update-Script (AKA PMCAUS) 
-
+# GLPB & AUS
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Nategarstka/PaperMC-Auto-Update-Script)
 ![GitHub contributors](https://img.shields.io/github/contributors/Nategarstka/PaperMC-Auto-Update-Script)
 
-<br> Check the wiki for more details and guides. Some acronymms I use are listed below for clarity:<br> PMCAUS = PaperMC Auto Update Script || SHS = SHell Script || CLI = Command Line Interface || SSH = Secure SHell
+<br> Check the wiki for more details and guides. Some acronymms I use are listed below for clarity:<br> GLPB ==  || SHS = SHell Script || CLI = Command Line Interface || SSH = Secure SHell
 ## Description:
 This is a SHS for the Linux Terminal that will fetch the latest version of Paper MC for your Minecraft version, will automaticlly install that build, and will backup the version you were just using into the directory ```backup_File_dirctory``` inside of your Minecraft Paper server's folder, in case you run into issues and need to rollback to an earlier build.
 
