@@ -1,7 +1,7 @@
 # 📜 GLPB & AUS
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Nategarstka/PaperMC-Auto-Update-Script)
 ![GitHub contributors](https://img.shields.io/github/contributors/Nategarstka/PaperMC-Auto-Update-Script)
-<br> GLPB and AUS are short for Get Latest Paper Build and Auto Update Server. These are 2 diffrent scripts designed to help keep your Minecraft Paper server updated. 
+<br> GLPB and AUS are short for '''Get Latest Paper Build''' and '''Auto Update Server.''' These are 2 diffrent scripts designed to help keep your Minecraft Paper server updated. 
 ### <br> Some acronymms I use are in this repo listed below for clarity:
 GLPB == Get Latest Paper Build || AUS = Auto Update Server || SHS = SHell Script(s) || CLI = Command Line Interface || SSH = Secure SHell
 
@@ -21,10 +21,10 @@ It is important to backup your files whenever making new changes. The following 
 now=`date +%Y-%m-%d-%H-%M`
 
 clear
-cd /home/mcserver
-sudo -u mcserver tar -cvzpf Minecraft-${now}.tar.gz Minecraft/
+cd /home/minecraft
+sudo -u minecraft tar -cvzpf Minecraft-${now}.tar.gz Minecraft/
 ```
-You will have to edit various values to match your directories. 
+You will have to edit various values to match your directories and work properly.
 
 ## 🧨 Compatibility with Other OS's:
 So far, this program has only been tested for the Ubuntu Linux Kernel, and should work with all distros that are Debian-based. This does <b>NOT</b> support any Windows based OS's, as the commands are very diffrent. Fedora/Red Hat, Arch, Slackware and Gentoo Linux have not yet been tested.
