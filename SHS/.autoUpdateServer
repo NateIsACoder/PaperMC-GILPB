@@ -30,7 +30,8 @@ fi
 echo -e "Latest build: ${GREEN}${LATEST_BUILD}${NC}"
 
 # Download new version
-echo -e "${YELLOW} Downloading latest Paper build for your version: ${GREEN}${LATEST_BUILD}${NC}"
+echo -e "${YELLOW} Downloading latest Paper build for your version..."
+
 DOWNLOAD_URL="https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}/builds/${LATEST_BUILD}/downloads/paper-${MINECRAFT_VERSION}-${LATEST_BUILD}.jar"
 
 curl -o "$SERVER_DIR/$JAR_NAME" "$DOWNLOAD_URL"
