@@ -42,7 +42,7 @@ else
         
         FULL_JAR_NAME="paper-${MINECRAFT_VERSION}-${LATEST_BUILD}.jar"
 
-        wget -q --show-progress -O "$SERVER_DIR/$FULL_JAR_NAME" "${DOWNLOAD_URL}" 
+        wget -q -O "$SERVER_DIR/$FULL_JAR_NAME" "${DOWNLOAD_URL}" 
 
         if [ $? -eq 0 ]; then
             echo ""
