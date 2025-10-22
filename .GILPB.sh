@@ -4,9 +4,13 @@
 # This program gets the latest paper build info for you specified Minecraft version, then optionally downloads and updates your server
 # Licensed under the Apache License 2.0
 
-# CONFIG
-MINECRAFT_VERSION="1.21.10"  # Change to your Minecraft version
-SERVER_DIR="/home/minecraft"  # Change to your server directory
+# ----------------------------------------------------------------------------------------
+# Script configuration
+
+MINECRAFT_VERSION="1.21.10" # Set the version of your Minecraft server
+SERVER_DIR="/home/minecraft" # Set the root directory of your Minecraft server
+
+# ----------------------------------------------------------------------------------------
 
 # Colors for output
 RED='\033[0;31m'
