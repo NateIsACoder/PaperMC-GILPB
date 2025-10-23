@@ -15,19 +15,19 @@ YELLOW='\033[1;33m'
 BLUE='\033[1;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}=== Nate G's GILPB script v2.3 ===${NC}"
+echo -e "${BLUE}=== Nate G's GILPB script v2.4 ===${NC}"
 
 # ===== Checking for existing jar files =====
-echo "Scanning for existing PaperMC jars in $SERVER_DIR..."
+echo "Scanning for existing PaperMC jars in ${RED}$SERVER_DIR...${NC}"
 EXISTING_JAR=$(find "$SERVER_DIR" -maxdepth 1 -name "paper-${MINECRAFT_VERSION}-*.jar" -type f 2>/dev/null | head -1)
 
 if [ -n "$EXISTING_JAR" ]; then
     echo -e "${BLUE}Found existing installation:${NC}${GREEN}$(basename "$EXISTING_JAR")${NC}"
 else
-    echo -e "${YELLOW}No existing PaperMC jar found for version ${MINECRAFT_VERSION}${NC}"
+    echo -e "${BLUE}No existing PaperMC jar found for version ${MINECRAFT_VERSION}${NC}"
 
     # Getting latest build number
-    echo "${BLUE}Searching for PaperMC Latest Build Info..."
+    echo -e "${YELLOW}Searching for PaperMC Latest Build Info..."
 
     LATEST_BUILD=$(curl -s "https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}" | grep -o '"builds":\[[0-9,]*\]' | grep -o '[0-9]*' | tail -1)
 
