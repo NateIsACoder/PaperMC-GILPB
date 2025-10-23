@@ -18,7 +18,7 @@ NC='\033[0m' # No Color
 echo -e "${BLUE}=== Nate G's GILPB script v2.4 ===${NC}"
 
 # ===== Checking for existing jar files =====
-echo "Scanning for existing PaperMC jars in ${RED}$SERVER_DIR...${NC}"
+echo -e "Scanning for existing PaperMC jars in ${RED}$SERVER_DIR...${NC}"
 EXISTING_JAR=$(find "$SERVER_DIR" -maxdepth 1 -name "paper-${MINECRAFT_VERSION}-*.jar" -type f 2>/dev/null | head -1)
 
 if [ -n "$EXISTING_JAR" ]; then
