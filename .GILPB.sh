@@ -54,6 +54,18 @@ else
       FULL_JAR_NAME="paper-${MINECRAFT_VERSION}-${LATEST_BUILD}.jar"
 
       wget -q -O "$SERVER_DIR/$FULL_JAR_NAME" "${DOWNLOAD_URL}" 
+      
+    echo ""
+    read -p "Would you like to delete old PaperMC jar files? (y/n): " cleanup
+    
+    if [[ "$cleanup" == "y" || "$cleanup" == "Y" ]]; then
+        echo -e "${YELLOW}Removing old jar files...${NC}"
+        
+        # Find and delete all paper jars EXCEPT the one we just downloaded
+        find "$SERVER_DIR" -maxdepth 1 -name "paper-*.jar" -type f ! -name "$FULL_JAR_NAME" -delete
+        
+        echo -e "${GREEN}Deleted old jar files!${NC}"
+    fi
 
       if [ $? -eq 0 ]; then
          echo ""
